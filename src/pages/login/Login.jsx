@@ -11,6 +11,7 @@ import {
   CircularProgress,
 } from '@mui/material';
 import { useAuth } from '../../auth/AuthContext';
+import boosterIcon from '../../assets/booster-icon.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -60,12 +61,18 @@ const Login = () => {
             border: '1px solid rgba(0, 0, 0, 0.05)',
           }}
         >
-          <Typography variant="h4" component="h1" gutterBottom align="center">
-            Booster
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align="center" sx={{ mb: 4 }}>
-            Delivery Management System
-          </Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 3 }}>
+            <img 
+              src={boosterIcon} 
+              alt="Booster" 
+              width={100} 
+              height={100}
+              style={{ marginBottom: '16px' }}
+            />
+            <Typography variant="h6" component="h1" gutterBottom align="center" sx={{ fontWeight: 600, color: '#5C4033' }}>
+              Accelerating Your Deliveries
+            </Typography>
+          </Box>
 
           {error && (
             <Alert severity="error" sx={{ mb: 2 }}>

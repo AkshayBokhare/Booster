@@ -138,14 +138,56 @@ const theme = createTheme({
     MuiListItemButton: {
       styleOverrides: {
         root: {
+          borderRadius: 8,
+          margin: '4px 8px',
+          transition: 'all 0.2s ease',
+          '&:hover': {
+            backgroundColor: 'rgba(250, 235, 215, 0.5)',
+          },
           '&.Mui-selected': {
             backgroundColor: '#FAEBD7', // Warm Cream for selected items
             color: '#5C4033',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
             '&:hover': {
               backgroundColor: '#E8D5B7',
             },
             '& .MuiListItemIcon-root': {
               color: '#5C4033',
+            },
+          },
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          '& .MuiInputLabel-root': {
+            color: '#5C4033',
+            '&.Mui-focused': {
+              color: '#ff5a36',
+            },
+            '&.Mui-required': {
+              '& .MuiInputLabel-asterisk': {
+                color: '#ff5a36',
+              },
+            },
+          },
+          '& .MuiOutlinedInput-root': {
+            borderRadius: 12,
+            transition: 'all 0.2s ease',
+            '& fieldset': {
+              borderColor: 'rgba(0, 0, 0, 0.23)',
+              borderWidth: '1px',
+            },
+            '&:hover fieldset': {
+              borderColor: 'rgba(0, 0, 0, 0.5)',
+            },
+            '&.Mui-focused fieldset': {
+              borderColor: '#ff5a36',
+              borderWidth: '2px',
+            },
+            '&.Mui-focused': {
+              boxShadow: '0 4px 12px rgba(255, 90, 54, 0.15)',
             },
           },
         },
